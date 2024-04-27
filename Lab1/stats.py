@@ -1,11 +1,16 @@
-###median mode mean
-import statistics
 
 def median(numbers):
-    return statistics.median(numbers)
+    numbers.sort()
+    x = len(numbers)
+    if x % 2 == 0:
+       return((numbers[((x-1) //2)] + numbers[(1+((x-1)//2))])/2)
+    else:
+        return (numbers[x//2])
+
 
 def mean(numbers):
-    return statistics.mean(numbers)
+    sums = sum(numbers)
+    return(sums/len(numbers))
 
 def mode(numbers):
     num_dict = {}
@@ -19,9 +24,8 @@ def mode(numbers):
     for key, values in num_dict.items():
         if values == x:
             modes.append(key)
-    print("Mode = ", end ="")
     for _ in modes:
-        print(_)
+        print(f"Mode = {_}")
         
 
 
@@ -30,7 +34,7 @@ def main():
     num = []
     print("INPUT ANY LETTER TO EXIT")
     while True:
-        x = input("Numbers chosen: ")
+        x = input("Numbers chosen: ").strip()
         if x.isdigit():
             num.append(int(x))
         else:

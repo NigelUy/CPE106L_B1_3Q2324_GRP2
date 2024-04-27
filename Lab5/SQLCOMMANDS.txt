@@ -1,0 +1,71 @@
+1.
+    a.SELECT * FROM CUSTOMERS
+    b. SELECT TRIP_ID, TRIP_DATE, NUM_PERSONS, TRIP_PRICE, OTHER_FEES, CUSTOMER_NUM FROM RESERVATION
+    c:
+            SELECT 
+            C.PHONE, 
+            C.LAST_NAME, 
+            C.FIRST_NAME, 
+            T.TRIP_ID, 
+            T.TRIP_NAME, 
+            T.START_LOCATION, 
+            T.STATE, 
+            T.DISTANCE, 
+            T.TYPE, 
+            T.SEASON
+        FROM TRIP T
+        JOIN RESERVATION R ON T.TRIP_ID = R.TRIP_ID
+        JOIN CUSTOMER C ON R.CUSTOMER_NUM = C.CUSTOMER_NUM;
+
+2. 
+    a.  SELECT * FROM OWNER
+    b:
+            SELECT 
+            L.LOCATION_NUM,
+            L.LOCATION_NAME,
+            L.ADDRESS,
+            L.CITY,
+            L.STATE,
+            L.POSTAL_CODE,
+            C.UNIT_NUM,
+            C.SQR_FT,
+            C.BDRMS,
+            C.BATHS,
+            C.OWNER_NUM
+            FROM CONDO_UNIT C
+        JOIN LOCATION L on C.LOCATION_NUM = L.LOCATION_NUM
+    
+    c:
+            SELECT 
+            O.OWNER_NUM,
+            O.FIRST_NAME,
+            O.LAST_NAME,
+            L.ADDRESS,
+            L.CITY,
+            L.STATE,
+            L.POSTAL_CODE,
+            S.SPENT_HOURS,
+            S.NEXT_SERVICE_DATE,
+            C.CONDO_FEE	
+        FROM CONDO_UNIT C,  OWNER O, SERVICE_REQUEST S, LOCATION L
+
+3. 
+    a. 
+            CREATE TABLE ADVENTURE_TRIP (
+            TRIP_ID DECIMAL(3, 0) PRIMARY KEY NOT NULL,
+            TRIP_NAME VARCHAR(75),
+            START_LOCATION CHAR(50),
+            STATE CHAR(2),
+            DISTANCE NUMBER,  
+            MAX_GRP_SIZE NUMBER,  
+            TYPE CHAR(20),
+            SEASON CHAR(20)  
+        );
+    b. INSERT INTO ADVENTURE_TRIP (TRIP_ID, TRIP_NAME, START_LOCATION, STATE, DISTANCE, MAX_GRP_SIZE, TYPE, SEASON)
+        VALUES (45, 'Jay Peak', 'Jay', 'VT', 8, 8, 'Hiking', 'Summer');
+    b. SELECT * FROM ADVENTURE_TRIP;
+    c. DROP TABLE ADVENTURE_TRIP;
+
+
+
+
