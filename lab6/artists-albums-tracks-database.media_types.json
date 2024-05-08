@@ -1,0 +1,69 @@
+[{
+  "_id": {
+    "$oid": "663a3b0e6178f37fdb96443e"
+  },
+  "MediaTypeId": {
+    "TrackID": [
+      {
+        "PlaylistId": {
+          "PlaylistId": "INTEGER",
+          "Name": "NVARCHAR(120)"
+        },
+        "TrackId": "INTEGER"
+      },
+      {
+        "AlbumID": {
+          "ArtistID": "INTEGER",
+          "Name": "NVARCHAR(120)"
+        },
+        "Title": "NVARCHAR(160)",
+        "ArtistId": "INTEGER"
+      },
+      {
+        "Invoiceltemld": {
+          "InvoiceID": {
+            "CustomerID": {
+              "EmployeeID": "INTEGER",
+              "LastName": "NVARCHAR(20)",
+              "FirstName": "NVARCHAR(20)",
+              "Title": "NVARCHAR(20)",
+              "ReportsTo": "INTEGER",
+              "Birthdate": "DATETIME",
+              "HireDate": "DATETIME",
+              "Address": "NVARCHAR(70)"
+            },
+            "FirstName": "NVARCHAR(40)",
+            "LastName": "NVARCHAR(20)",
+            "Company": "NVARCHAR(80)",
+            "Address": "NVARCHAR(70)",
+            "City": "NVARCHAR(40)",
+            "State": "NVARCHAR(40)",
+            "Country": "NVARCHAR(40)",
+            "PostalCode": "NVARCHAR(10)",
+            "Phone": "NVARCHAR(24)",
+            "Fax": "NVARCHAR(24)",
+            "Email": "NVARCHAR(60)",
+            "SupportRepId": "INTEGER"
+          },
+          "CustomerId": "INTEGER",
+          "InvoiceDate": "DATETIME",
+          "Billingaddress": "NVARCHAR(24)",
+          "BillingCity": "NVARCHAR(24)"
+        },
+        "InvoiceID": "INTEGER",
+        "TrackID": "INTEGER",
+        "UnitPrice": "NUMERIC",
+        "Quantity": "INTEGER"
+      }
+    ],
+    "Name": "NVARCHAR(200)",
+    "AlbumId": "INTEGER",
+    "MediaTypeID": "INTEGER",
+    "Genreld": "INTEGER",
+    "Composer": "NVARCHAR(220)",
+    "Milliseconds": "INTEGER",
+    "Bytes": "INTEFER",
+    "UnitPrice": "NUMERIC"
+  },
+  "Name": "NVARCHAR(120)"
+}]
